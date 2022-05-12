@@ -1,0 +1,145 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(/images/bg-desktop.png);
+    background-position-y: 350px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 12%;
+    
+  }
+  .container .left {
+    padding: 35px 50px;
+    background-color: hsl(228, 56%, 26%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 3px 6px 20px 0px black;
+    margin: 50px;
+  }
+  .container .left .list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .container .left .list div {
+    border-radius: 12px;
+    background-color: hsl(229, 57%, 11%);
+    margin-right: 30px;
+    padding: 10px 14px;
+  }
+  .container .right {
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px;
+    color: white;
+    width: 400px;
+    padding: 32px;
+    box-shadow: 3px 6px 20px 0px black;
+    position: relative;
+    margin-top: 60px;
+  }
+  
+  .container .right .message {
+    background-color: white;
+    position: absolute;
+    right: 31px;
+    color: black;
+    top: -26px;
+    padding: 13px;
+    border-radius: 5px;
+  }
+
+  .container .right .message::before{
+    content: "";
+    border: 16px solid;
+    position: absolute;
+    border-color: #ff000000 white #ff000000 #ff000000;
+    right: 0px;
+    top: 31px;
+      
+  }
+  .container .right .message span:first-child{
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+  .container .right .message span:last-child{
+    color: #000000b8;
+    font-size: 11px;
+  }
+
+  .container .right .top span {
+      font-weight: bolder;
+  }
+
+  .container .right .loading {
+    border-radius: 10px;
+    background-color: hsl(229, 57%, 11%);
+    width: 100%;
+    height: 15px;
+    margin: 20px 0 8px;
+    padding: 2px;
+    display: flex;
+  }
+
+  .container .right .loading div:first-child {
+    background: linear-gradient(to right, hsl(6, 100%, 80%),  hsl(335, 100%, 65%));
+    width: 75%;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.container .right .loading div:last-child {
+    background-color: white;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: -10px;
+    margin-top: 1px;    
+}
+
+.container .right .bottom {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+  
+  @media (max-width: 375px) {
+    body {
+     background-image: url("/images/bg-mobile.png"); 
+     background-size: cover;
+     background-position-y: 0;
+     width: 375px;
+    }
+    .container {
+      margin-top: 40%;
+    }
+    .container .left{
+      margin: 10PX 0;
+      width: 300px;
+    }
+    .container .right{
+      margin: 10px 0;
+      width: 300px;
+    }
+    .container .right .message {
+      right: 105px;
+      top: 115px;
+    }
+    .container .right .message::before{
+      border-color: #ff000000 #ff000000 #ff000000 #ff000000;
+  }
+}
